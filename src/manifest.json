@@ -1,0 +1,23 @@
+{
+  "name": "extremeWindow",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "send a url and the extension open a topLeft window of that url",
+  "permissions": [
+    "system.display"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "file_system_provider_capabilities": {
+    "source": "network"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}

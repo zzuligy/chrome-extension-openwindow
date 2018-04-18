@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="url" placeholder="https://www.360.cn/" style="    width: 200px;height: 60px;">
+<button id="btn">打开窗口</button>
+<script>
+  let btn = document.querySelector('#btn')
+  let urlInput = document.querySelector('#url')
+  btn.onclick = function () {
+    console.log('postmessage...')
+    window.postMessage(urlInput.value || 'http://360.cn', '*')
+    // openRequestedPopup()
+  }
+
+</script>
+</body>
+</html>
